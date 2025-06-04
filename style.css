@@ -1,0 +1,97 @@
+body {
+  background-color: #f1f3f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+}
+
+header {
+  background: linear-gradient(90deg, #031c42, #9889af);
+  color: white;
+}
+
+h1, h2, h3, h5 {
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+/* Input and Button Styling */
+input, textarea {
+  border-radius: 6px !important;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Task and Skills List */
+#taskList li,
+#skillList li,
+#projectList li {
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  border-left: 4px solid #0d6efd;
+  border-radius: 5px;
+  list-style: none;
+}
+
+/* CV Output Styling */
+#cvSection {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#cvSection h2 {
+  color: #0d6efd;
+}
+
+#cvPhoto {
+  border: 3px solid #0d6efd;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Print Specific */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #cvSection, #cvSection * {
+    visibility: visible;
+  }
+
+  #cvSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  button {
+    display: none !important;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+}
